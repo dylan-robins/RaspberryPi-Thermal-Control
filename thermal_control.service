@@ -1,0 +1,11 @@
+[Unit]
+Description=Manages the fan connected to GPIO pin 17
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/local/bin/thermal_control/thermal_control.sh
+Restart=on-abort
+User=robinsd
+
+[Install]
+WantedBy=multi-user.target
